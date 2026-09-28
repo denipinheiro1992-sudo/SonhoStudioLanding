@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0a0a0a;
+  --color-brand-darker: #111111;
+  --color-brand-light: #ffffff;
+  --color-brand-accent: #FFD700;
+  --color-brand-accent-hover: #e6c200;
+  --color-brand-accent-dark: #ccac00;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+
+  --animate-pulse-subtle: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+  }
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-[#ffffff] font-sans antialiased selection:bg-brand-accent selection:text-[#0a0a0a];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight font-black;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

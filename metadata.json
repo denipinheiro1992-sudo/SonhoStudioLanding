@@ -1,0 +1,6 @@
+{
+  "name": "Sonho Studio",
+  "description": "Agência digital express para pequenos negócios. Marketing, design e tecnologia rápida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
